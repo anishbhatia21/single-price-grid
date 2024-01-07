@@ -1,0 +1,139 @@
+:root{
+    --clr-cyan: hsl(179, 62%, 43%);
+    --clr-yellow: hsl(71, 73%, 54%);
+    --clr-gray: hsl(204, 43%, 93%);
+    --clr-blue: hsl(218, 22%, 67%);
+}
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+    min-height: 100svh;
+    font-family: 'Karla', sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-gray);
+  }
+
+  .price-grid{
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    max-width: 40rem;
+    overflow: hidden;
+    margin: 1rem;
+  }
+
+  h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-cyan);
+  }
+
+  .community{
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .community p{
+    color: var(--clr-blue);
+    line-height: 1.7rem;
+  }
+
+  h3{
+    font-size: 1.1rem;
+    color: var(--clr-yellow);
+    font-weight: 700;
+  }
+
+  .sub{
+    background-color: var(--clr-cyan);
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .why{
+    background-color: hsl(179, 62%, 43%, .7);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .bottom-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  p{
+    color: var(--clr-gray);
+  }
+
+  button{
+    border: none;
+    border-radius: 6px;
+    padding: .7rem 1rem;
+    background-color: var(--clr-yellow);
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+  }
+
+  h2{
+    font-weight: 700;
+    color: white;
+  }
+
+  span{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  ul li{
+    list-style: none;
+    color: var(--clr-gray);
+    font-size: .9rem;
+    line-height: 1.3rem;
+  }
+
+  .light {
+    color: hsl(204, 43%, 93%, .5);
+  }
+
+  @media (max-width: 500px) {
+    .bottom-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .sub{
+        place-content: unset;
+        gap: 1rem;
+        padding: 2rem;
+      }
+  }
